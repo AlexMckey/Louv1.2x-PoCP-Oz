@@ -15,7 +15,7 @@ fun {Eval L}
     Res = {NewStack}
     for E in L do
       case E of
-        '+' then {Push Res {Pop Res} + {Pop Res}}
+         '+' then {Push Res {Pop Res} + {Pop Res}}
       [] '*' then {Push Res {Pop Res} * {Pop Res}}
       [] '-' then {Push Res ~{Pop Res} + {Pop Res}}
       [] '/' then
